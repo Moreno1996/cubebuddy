@@ -1,0 +1,44 @@
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  color: #e7f9b9; }
+
+p {
+  color: white; }
+
+#home {
+  width: 100%;
+  height: 100%; }
+  #home #title-box, #home #image-box {
+    width: 50%;
+    margin: 0; }
+  #home #image-box {
+    left: 50%; }
+
+#menu {
+  padding: 0;
+  width: 100%;
+  background: rgba(116, 146, 43, 0.8);
+  position: absolute; }
+  #menu ul {
+    width: 60%;
+    margin: 0;
+    margin-left: 20%; }
+  #menu li {
+    display: block;
+    float: left;
+    padding: 0.75em;
+    margin-right: 2em; }
+
+.main-container:nth-child(odd) {
+  background: #64870C;
+  color: #e7f9b9; }
+
+.main-container:nth-child(even) {
+  background: white;
+  color: #64870C; }
+
+/*# sourceMappingURL=style.css.map */

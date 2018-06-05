@@ -1,0 +1,53 @@
+ $main-color: #A1C743;
+ $main-color-dark:#64870C;
+ $main-color-light:#DBF59C;
+ $focus-color:#CC4552;
+ $white-color:hsl(77.1,83.7%,85%);
+
+body, html {
+	height:100%;
+    padding:0;
+    margin:0;
+}
+h1{
+	 color:$white-color;
+}
+p{
+	color:white;
+}
+#home{
+	width: 100%;
+	height: 100%;
+	#title-box, #image-box{
+	width: 50%;
+	margin:0;
+	}
+	#image-box{
+		left:50%;
+	}
+}
+#menu{
+	padding:0;
+	width:100%;
+	background:rgba(darken($main-color,15%),0.8); 
+	position: absolute;
+	ul{
+	width:60%;
+	margin:0;
+	margin-left:20%;
+	}
+	li{
+		display: block;
+		float:left;
+		padding:0.75em;
+		margin-right:2em;
+	}	
+}
+.main-container:nth-child(odd) {
+	background: $main-color-dark;
+	color:$white-color;
+}
+.main-container:nth-child(even) {
+	background: white;
+	color:$main-color-dark
+}
