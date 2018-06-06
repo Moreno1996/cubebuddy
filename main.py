@@ -1,5 +1,5 @@
 from flask import Flask, request
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy  import SQLAlchemy
 from flask_restful import Resource, Api
 from os import environ
 
