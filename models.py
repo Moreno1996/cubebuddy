@@ -3,7 +3,7 @@ from main import db
 class DailyTiming(db.Model):
     __tablename__ = "dailyTimes"
     id=db.Column(db.Integer, primary_key=True)
-    time = db.Column(db.Long, nullable=False)
+    time = db.Column(db.BigInteger, nullable=False)
 
     def __init__(self,time):
         self.time = time
