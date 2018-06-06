@@ -4,8 +4,6 @@ from os import environ
 
 app = Flask(__name__)
 api = Api(app)
-app.run(environ.get('PORT'))
-
 names = []
 class HelloWorld(Resource):
     def get(self):
