@@ -1,3 +1,14 @@
+aniso8601==3.0.0
+click==6.7
+Django==2.0.4
 Flask==1.0.2
 Flask-RESTful==0.3.6
+gunicorn==19.8.1
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
 numpy==1.14.2
+pytz==2018.4
+six==1.11.0
+virtualenv==15.2.0
+Werkzeug==0.14.1
