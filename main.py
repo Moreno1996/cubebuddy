@@ -3,6 +3,7 @@ from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
+app.run(host='0.0.0.0')
 
 names = []
 class HelloWorld(Resource):
