@@ -38,10 +38,12 @@ class AddTimes(Resource):
     def get(self,time):
         from models import DailyTiming
         times.append(time)
+        test = db.session.query.all()
         db.session.add(DailyTiming(6500))
         db.session.commit()
         return {
-            'you sent': time,}
+            'you sent': time,
+        'testQuery' : test}
 
 api.add_resource(HelloWorld,'/')
 api.add_resource(Multi,'/multi/<int:num>')
