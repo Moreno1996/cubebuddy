@@ -5,7 +5,7 @@ from os import environ
 
 app = Flask(__name__)
 api = Api(app)
-names = []
+times = []
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uwemzddveqrlwh:b5f6f2a85176583be8fa5d13738ed2f9f0d35c15057c974cd518d4e54c224aa1@ec2-54-247-89-189.eu-west-1.compute.amazonaws.com:5432/d6c6au1ssndtng'
 db = SQLAlchemy(app)
 
@@ -37,12 +37,11 @@ class AddNames(Resource):
 class AddTimes(Resource):
     def get(self,time):
         from models import DailyTiming
-        time.append(time)
+        times.append(time)
         db.session.add(DailyTiming(6500))
         db.session.commit()
         return {
             'you sent': time,}
-
 
 api.add_resource(HelloWorld,'/')
 api.add_resource(Multi,'/multi/<int:num>')
