@@ -28,5 +28,4 @@ api.add_resource(Multi,'/multi/<int:num>')
 api.add_resource(addNames,'/addName/<string:name>')
 
 if __name__ == '__main__':
-    port = int(environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=environ.get("PORT", 5000),debug=False)
