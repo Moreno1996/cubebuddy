@@ -1,10 +1,13 @@
-from flask import Flask, request,jsonify
+from flask import Flask, request
+from flask.ext.sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api
 from os import environ
 
 app = Flask(__name__)
 api = Api(app)
 names = []
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.db'
+db = SQLAlchemy(app)
 
 
 class HelloWorld(Resource):
