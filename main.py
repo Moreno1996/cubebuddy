@@ -2,7 +2,6 @@ from flask import Flask, request
 from flask_sqlalchemy  import SQLAlchemy
 from flask_restful import Resource, Api
 from os import environ
-from models import DailyTiming
 
 app = Flask(__name__)
 api = Api(app)
@@ -36,10 +35,11 @@ class AddNames(Resource):
             'all Names': names}
 
 class AddTimes(Resource):
-
     def get(self,time):
+        from models import DailyTiming
         time.append(time)
-        db.session.add(DailyTiming(time))
+        db.session.add(DailyTiming(6500))
+        db.session.commit()
         return {
             'you sent': time,}
 
