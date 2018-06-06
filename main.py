@@ -1,9 +1,10 @@
 from flask import Flask, request,jsonify
 from flask_restful import Resource, Api
+from os import environ
 
 app = Flask(__name__)
 api = Api(app)
-app.run(host='0.0.0.0')
+app.run(environ.get('PORT'))
 
 names = []
 class HelloWorld(Resource):
