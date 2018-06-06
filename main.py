@@ -38,7 +38,7 @@ class AddTimes(Resource):
     def get(self,time):
         from models import DailyTiming
         times.append(time)
-        test = db.session.query.all()
+        test = db.session.query(DailyTiming).all()
         db.session.add(DailyTiming(6500))
         db.session.commit()
         return {
