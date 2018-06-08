@@ -48,7 +48,7 @@ class AddTimes(Resource):
         result = [q.serialize() for q in query]
         return {
             'you sent': time,
-            'testQuery' : result}
+            'testQuery': result}
 
 api.add_resource(HelloWorld,'/')
 api.add_resource(Multi,'/multi/<int:num>')
