@@ -2,7 +2,7 @@ from main import db
 import time
 class DailyTiming(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    timing = db.Column(db.BigInteger , nullable=False)
+    timing = db.Column(db.BigInteger, nullable=False)
     date = db.Column(db.BigInteger, nullable=False)
 
     def __init__(self,timing1,date1):
