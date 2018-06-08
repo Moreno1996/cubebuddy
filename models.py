@@ -1,5 +1,6 @@
 from main import db
 import time
+import datetime
 class DailyTiming(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     timing = db.Column(db.BigInteger, nullable=False)
@@ -18,5 +19,7 @@ class DailyTiming(db.Model):
     def serialize(self):
         return {
             'Time': self.timing,
-            'Date': self.date,
+            'miliseconds': self.date,
+            'Date': datetime.datetime.fromtimestamp(self.date/1000.0)
+
         }
