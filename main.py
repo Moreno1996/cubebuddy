@@ -54,5 +54,5 @@ api.add_resource(AddNames,'/addName/<string:name>')
 api.add_resource(AddTimes,'/addTime/<int:time>')
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', port=environ.get("PORT", 5000),debug=False)
-    app.run(debug=True)
+     app.run(host='0.0.0.0', port=environ.get("PORT", 5000),debug=False)
+    #app.run(debug=True)
