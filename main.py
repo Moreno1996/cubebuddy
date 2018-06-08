@@ -7,7 +7,7 @@ app = Flask(__name__)
 api = Api(app)
 times = []
 names = []
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uwemzddveqrlwh:b5f6f2a85176583be8fa5d13738ed2f9f0d35c15057c974cd518d4e54c224aa1@ec2-54-247-89-189.eu-west-1.compute.amazonaws.com:5432/d6c6au1ssndtng'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ohooefufvmascx:b797cf716109155ae89312e7508ac7de420e192ee197754698ba3a8f6b2f2068@ec2-54-225-240-168.compute-1.amazonaws.com:5432/dbp7qvupqtsftj'
 db = SQLAlchemy(app)
 db.create_all()
 db.session.commit()
