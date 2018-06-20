@@ -38,7 +38,7 @@ class AddNames(Resource):
             'all Names': names}
 
 class AddTimes(Resource):
-    def get(self,time):
+    def get(self,time, userName):
         from models import DailyTiming
         timeGet = DailyTiming(time, None)
         times.append(timeGet)
@@ -53,7 +53,8 @@ class AddTimes(Resource):
 api.add_resource(HelloWorld,'/')
 api.add_resource(Multi,'/multi/<int:num>')
 api.add_resource(AddNames,'/addName/<string:name>')
-api.add_resource(AddTimes,'/addTime/<int:time>')
+api.add_resource(AddTimes,'/addTime/<int:time><string:userName>')
+api.add_resource(GetTimes,'/getTime/<int:time>')
 
 if __name__ == '__main__':
      app.run(host='0.0.0.0', port=environ.get("PORT", 5000),debug=False)
