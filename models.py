@@ -18,8 +18,8 @@ class DailyTiming(db.Model):
 
     def serialize(self):
         return {
-            'Time': self.timing,
-            'miliseconds': self.date,
-            'Date': datetime.datetime.fromtimestamp(self.date/1000.0)
+            'time': self.timing,
+            'date': self.date,
+            # 'Date': datetime.datetime.fromtimestamp(self.date/1000.0)
 
         }
